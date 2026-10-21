@@ -1,36 +1,38 @@
 class Loupe < Formula
   desc "Close the loop between Loupe and a local coding agent"
   homepage "https://github.com/ubermuda/loupe"
-  version "1.21.1"
+  version "1.22.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/ubermuda/loupe/releases/download/cli/v1.21.1/loupe_1.21.1_darwin_arm64.tar.gz"
-      sha256 "df4a11d2d0c52dab545753f284418e2fc0365158b8ada47a6d1cc27509dbd79f"
+      url "https://github.com/ubermuda/loupe/releases/download/cli/v1.22.0/loupe_1.22.0_darwin_arm64.tar.gz"
+      sha256 "d73d7d199bb6cecc2fa5bffa7eb2d87992fd200fd79b8b69b58578ef1c26c1f3"
     end
     on_intel do
-      url "https://github.com/ubermuda/loupe/releases/download/cli/v1.21.1/loupe_1.21.1_darwin_amd64.tar.gz"
-      sha256 "0e35eff854de6afd55158471ee99942a11b8799b7e2b0b9d190d39289f3f3ed4"
+      url "https://github.com/ubermuda/loupe/releases/download/cli/v1.22.0/loupe_1.22.0_darwin_amd64.tar.gz"
+      sha256 "613947b9d6f8a9d1e4e934bcd9500a17234abb25c3ef83315349585ddbe26218"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ubermuda/loupe/releases/download/cli/v1.21.1/loupe_1.21.1_linux_arm64.tar.gz"
-      sha256 "885e8c1c1f3fd38bddc67bdb9f6503e0766aeb8d3a5ec660299bde8387ed0f9b"
+      url "https://github.com/ubermuda/loupe/releases/download/cli/v1.22.0/loupe_1.22.0_linux_arm64.tar.gz"
+      sha256 "c1180739d469e288b8e48746c7b1f3143677470295413b5c42784663d1dd2ef7"
     end
     on_intel do
-      url "https://github.com/ubermuda/loupe/releases/download/cli/v1.21.1/loupe_1.21.1_linux_amd64.tar.gz"
-      sha256 "e69ade7ea2bfaf6e17b80c4b3fdc6861ff6a91efc6fb14540c82cef92ccce2c5"
+      url "https://github.com/ubermuda/loupe/releases/download/cli/v1.22.0/loupe_1.22.0_linux_amd64.tar.gz"
+      sha256 "13c6fd0209edc4a0604d5a07a77e0e67517aafcd5a1d4f300104b45cd8c7d07c"
     end
   end
 
   def install
     bin.install "loupe"
+    libexec.install "Live review.app" if OS.mac?
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/loupe version")
+    assert_path_exists libexec/"Live review.app" if OS.mac?
   end
 end
