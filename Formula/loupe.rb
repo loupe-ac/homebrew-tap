@@ -1,28 +1,28 @@
 class Loupe < Formula
   desc "Close the loop between Loupe and a local coding agent"
   homepage "https://github.com/loupe-ac/loupe"
-  version "1.28.0"
+  version "1.29.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     on_arm do
-      url "https://github.com/loupe-ac/loupe/releases/download/cli/v1.28.0/loupe_1.28.0_darwin_arm64.tar.gz"
-      sha256 "dcc54358b0e8d4a3bfa77e7b9eddc9599944a7036e66238e6f98588672071b4b"
+      url "https://github.com/loupe-ac/loupe/releases/download/cli/v1.29.0/loupe_1.29.0_darwin_arm64.tar.gz"
+      sha256 "ad1dbb22338e62c41df6be918deaa50b5ab4777d808640421e8d2d3e53383485"
     end
     on_intel do
-      url "https://github.com/loupe-ac/loupe/releases/download/cli/v1.28.0/loupe_1.28.0_darwin_amd64.tar.gz"
-      sha256 "e03aa238fcaec9d8cac82041d26b63edf8147577a9726c3ddd92f428fba22b3c"
+      url "https://github.com/loupe-ac/loupe/releases/download/cli/v1.29.0/loupe_1.29.0_darwin_amd64.tar.gz"
+      sha256 "e030077b8780a5b3c36b73e5efe98aa066203fc4b33cf59ea52860bdb63dea4d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/loupe-ac/loupe/releases/download/cli/v1.28.0/loupe_1.28.0_linux_arm64.tar.gz"
-      sha256 "935ed4b983de045fea00d0c516cbf6b33b6ebc017763438de543d58c55147af1"
+      url "https://github.com/loupe-ac/loupe/releases/download/cli/v1.29.0/loupe_1.29.0_linux_arm64.tar.gz"
+      sha256 "6ed9ae04177bc307f9931aea84449ae3479e16859980c3e0153b94548cbe6bee"
     end
     on_intel do
-      url "https://github.com/loupe-ac/loupe/releases/download/cli/v1.28.0/loupe_1.28.0_linux_amd64.tar.gz"
-      sha256 "71a82ea904948b15775880d3c3955e78fce23476bf359e87cad123dbc2f56c1f"
+      url "https://github.com/loupe-ac/loupe/releases/download/cli/v1.29.0/loupe_1.29.0_linux_amd64.tar.gz"
+      sha256 "5288c042a8fe005f0d4034c822023154cbfe370c10b013721993f2353d6d23b4"
     end
   end
 
